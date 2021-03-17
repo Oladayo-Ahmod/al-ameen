@@ -675,6 +675,13 @@ section {
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
+.heading{
+  font-weight:bolder;
+}
+.product {
+  color: #0b70dc !important;
+  font-weight: 700;
+}
 .featured-services .icon-box {
   padding: 30px;
   position: relative;
