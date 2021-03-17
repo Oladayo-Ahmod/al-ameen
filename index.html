@@ -58,9 +58,9 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about" >About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact"  type="button" data-toggle="modal" data-target="#contact">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -249,6 +249,55 @@
     <a href="https://unitechdev.com" class="text-danger">Unitech</a> 
     </p>
 </footer>
+
+  <!--modal section-->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+    Launch
+  </button>
+  
+  <!-- Modal -->
+  
+  <div class="modal fade" id="contact" tabindex="-1" role="dialog" arial-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="submit" class="close" data-dismiss="modal" arial-label="Close" ><span arial-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-group" enctype="multipart/form-data" method="POST" action="">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="" required class="form-control"><br>
+                    <label for="Email">Email</label>
+                    <input type="email" required class="form-control"><br>
+                    <label for="number">Phone number</label>
+                    <input type="number" class="form-control"><br>
+                    <label for="appointment">Appointment date</label>
+                    <input type="date" name="date" id="" class="form-control"><br>
+                    <label for="location">Your location</label>
+                    <select class="form-control" name="location" id="" required>
+                        <option value="" disabled selected>Select Your State</option>
+                        <option value="kwara">Kwara</option>
+                        <option value="lagos">Lagos</option>
+                        <option value="oyo">Oyo</option>
+                        <option value="kogi">Kogi</option>
+                        <option value="osun">Osun</option>
+                        <option value="others">Others</option>
+                    </select><br>                                                       
+                  <button type="submit" class="btn btn-primary" name="save">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel
+                </button>
+                
+            </div>
+        </div>
+    </div>
+</div>	
+  <!-- modal section ends -->
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
