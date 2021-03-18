@@ -692,6 +692,14 @@ section {
   color: #0b70dc !important;
   font-weight: 400;
 }
+.product-hover{
+  transition: 1s ease-in;
+  max-width : fit-content !important;
+}
+.product-hover > img:hover{
+  transform:scale(1.2);
+  transition: 1s ease-in;
+}
 .featured-services .icon-box {
   padding: 30px;
   position: relative;
