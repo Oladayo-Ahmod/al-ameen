@@ -82,7 +82,7 @@
 
   <!-- our products section-->
   <div class="container-fluid mt-5 trending">
-    <h2 class="text-center heading text-primary my-4 bg-light">Our Products</h2>
+    <h2 class="text-center heading text-primary my-4">Our Products</h2>
     <div class="row">
 
         <div class="col-md-3 my-4">
@@ -101,7 +101,9 @@
         <div class="col-md-3 my-4">
             <a href="https://api.whatsapp.com/send?phone=2348055882270&text=i want to place order on product 2">
                 <div class="card shadow" style="background-color: rgba(113,127,142,0.25); border-color:rgb(230, 230, 248);">
+                  <div class="product-hover">
                     <img class="card-img-top" height="250px" src="assets/img/products/portfolio-5.jpg" alt="trending product">
+                  </div>
                     <div class="card-body">
                         <h4 class="card-title product text-center text-primary">Product 2</h4>
                     </div>
@@ -112,7 +114,9 @@
         <div class="col-md-3 my-4">
             <a href="https://api.whatsapp.com/send?phone=2348055882270&text=i want to place order on product 3">
                 <div class="card shadow" style="background-color: rgba(113,127,142,0.25); border-color:rgb(230, 230, 248);">
+                  <div class="product-hover">
                     <img class="card-img-top" height="250px" src="assets/img/products/portfolio-3.jpg" alt="trending product">
+                  </div>
                     <div class="card-body">
                         <h4 class="card-title product text-center text-primary">Product 3</h4>
                     </div>
@@ -123,7 +127,9 @@
         <div class="col-md-3 my-4">
             <a href="https://api.whatsapp.com/send?phone=2348055882270&text=i want to place order on productv 4">
                 <div class="card shadow" style="background-color: rgba(113,127,142,0.25); border-color:rgb(230, 230, 248);">
+                  <div class="product-hover">
                     <img class="card-img-top" height="250px" src="assets/img/products/portfolio-4.jpg" alt="trending product">
+                  </div>
                     <div class="card-body">
                         <h4 class="card-title text-center product text-primary">Product 4</h4>
                     </div>
@@ -253,14 +259,39 @@
 </footer>
 
   <!--modal section-->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-    Launch
-  </button>
   
-  <!-- Modal -->
+  <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Contact us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form class="form-group" enctype="multipart/form-data" method="POST" action="">
+              <label for="name">Name</label>
+              <input type="text" placeholder="" required class="form-control">
+              <label for="Email">Email</label>
+              <input type="email" required class="form-control">
+              <label for="message">Message</label>
+              <textarea name="" id="" cols="30" rows="3"></textarea>                               
+          </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
-  <div class="modal fade" id="contact" tabindex="-1" role="dialog" arial-labelledby="myModalLabel">
+  
+  
+  <div class="modal fade" id="contacts" tabindex="-1" role="dialog" arial-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -269,24 +300,12 @@
             </div>
             <div class="modal-body">
                 <form class="form-group" enctype="multipart/form-data" method="POST" action="">
-                    <label for="name">Full Name</label>
+                    <label for="name">Name</label>
                     <input type="text" placeholder="" required class="form-control"><br>
                     <label for="Email">Email</label>
                     <input type="email" required class="form-control"><br>
-                    <label for="number">Phone number</label>
-                    <input type="number" class="form-control"><br>
-                    <label for="appointment">Appointment date</label>
-                    <input type="date" name="date" id="" class="form-control"><br>
-                    <label for="location">Your location</label>
-                    <select class="form-control" name="location" id="" required>
-                        <option value="" disabled selected>Select Your State</option>
-                        <option value="kwara">Kwara</option>
-                        <option value="lagos">Lagos</option>
-                        <option value="oyo">Oyo</option>
-                        <option value="kogi">Kogi</option>
-                        <option value="osun">Osun</option>
-                        <option value="others">Others</option>
-                    </select><br>                                                       
+                    <label for="message">Message</label>
+                    <textarea name="" id="" cols="32" rows="3"></textarea>                               
                   <button type="submit" class="btn btn-primary" name="save">Submit</button>
                 </form>
             </div>
@@ -323,6 +342,12 @@
     fadeOut: true,
     loop: true
   });
+    $('#exampleModal').on('show.bs.modal', event => {
+      var button = $(event.relatedTarget);
+      var modal = $(this);
+      // Use above variables to manipulate the DOM
+      
+    });
   </script>
 
 </body>

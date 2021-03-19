@@ -207,9 +207,6 @@ h1, h2, h3, h4, h5, h6 {
     margin:0;
   }
 }
-#contact{
-  z-index:99;
-}
 .nav-menu ul {
   margin: 0;
   padding: 0;
@@ -693,12 +690,13 @@ section {
   font-weight: 400;
 }
 .product-hover{
-  transition: 1s ease-in;
-  max-width : fit-content !important;
+  overflow: hidden;
+}
+.product-hover > img{
+  transition : 1s ease;
 }
 .product-hover > img:hover{
   transform:scale(1.2);
-  transition: 1s ease-in;
 }
 .featured-services .icon-box {
   padding: 30px;
